@@ -1,0 +1,14 @@
+diff --git a/packages/scratch-vm/src/extension-support/extension-manager.js b/packages/scratch-vm/src/extension-support/extension-manager.js
+index 6922cdafd..0858e37b3 100644
+--- a/packages/scratch-vm/src/extension-support/extension-manager.js
++++ b/packages/scratch-vm/src/extension-support/extension-manager.js
+@@ -24,7 +24,8 @@ const builtinExtensions = {
+     makeymakey: () => require('../extensions/scratch3_makeymakey'),
+     boost: () => require('../extensions/scratch3_boost'),
+     gdxfor: () => require('../extensions/scratch3_gdx_for'),
+-    faceSensing: () => require('../extensions/scratch3_face_sensing')
++    faceSensing: () => require('../extensions/scratch3_face_sensing'),
++    yourScratchExtension: () => require('../extensions/your-scratch-extension')
+ };
+ 
+ /**
