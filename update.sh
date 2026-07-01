@@ -12,11 +12,11 @@ if [ "$filepath1" != $filepath2 ]; then
 	cd $filepath2
 fi
 
-git fetch upstream
+git fetch
 echo
-git merge upstream/master -m "sync upstream"
+git merge origin/master -m "sync upstream"
 echo
-git push origin master
+git push master
 echo
 git fetch
 echo
