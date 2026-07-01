@@ -14,6 +14,8 @@ fi
 
 git fetch
 echo
+git merge origin/master -m "sync upstream"
+echo
 git push master
 echo
 git fetch
