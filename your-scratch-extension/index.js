@@ -72,7 +72,6 @@ class Scratch3YourExtension {
                             //     ArgumentType.NOTE - midi music value with a piano picker
                             type: ArgumentType.NUMBER
                         },
-                        }
                     }
                 }
             ]
@@ -86,7 +85,7 @@ class Scratch3YourExtension {
      */
     sin ({ MY_NUMBER }) {
         // example implementation to return a string
-        return (MY_NUMBER * 2);
+        return ( Math.sin ( MY_NUMBER * (Math.PI / 180) ) );
     }
 }
 
