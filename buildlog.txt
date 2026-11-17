@@ -1,0 +1,557 @@
+Verifying location of Scratch source is known
+BUILDING SCRATCH ...
+
+> scratch-editor@13.7.1 build
+> cross-env NODE_ENV=production npm run --workspaces build
+
+
+> @scratch/task-herder@13.7.1 build
+> tsc --project tsconfig.build.json && vite build
+
+rolldown-vite v7.3.1 building client environment for production...
+[2Ktransforming...✓ 6 modules transformed.
+rendering chunks...
+
+[unplugin:dts] Start generate declaration files...
+[unplugin:dts] Declaration files built in 1092ms.
+
+computing gzip size...
+dist/task-herder.js  4.08 kB │ gzip: 1.36 kB
+[2Ktransforming...✓ 6 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/task-herder.umd.cjs  3.34 kB │ gzip: 1.30 kB
+✓ built in 1.22s
+
+> @scratch/scratch-svg-renderer@13.7.1 build
+> npm run clean && webpack
+
+
+> @scratch/scratch-svg-renderer@13.7.1 clean
+> rimraf dist playground
+
+asset scratch-svg-renderer.js 19.9 KiB [emitted] [minimized] (name: scratch-svg-renderer) 1 related asset
+cacheable modules 67.7 KiB
+  ./src/index.js 756 bytes [built] [code generated]
+  ./src/svg-renderer.js 5.65 KiB [built] [code generated]
+  ./src/load-svg-string.js 12.4 KiB [built] [code generated]
+  ./src/svg-element.js 1.86 KiB [built] [code generated]
+  ./src/font-converter.js 1.35 KiB [built] [code generated]
+  + 7 modules
+external "css-tree" 42 bytes [built] [code generated]
+external "css-tree/utils" 42 bytes [built] [code generated]
+external "isomorphic-dompurify" 42 bytes [built] [code generated]
+external "fastestsmallesttextencoderdecoder" 42 bytes [built] [code generated]
+external "scratch-render-fonts" 42 bytes [built] [code generated]
+external "base64-js" 42 bytes [built] [code generated]
+external "transformation-matrix" 42 bytes [built] [code generated]
+external "tslog" 42 bytes [built] [code generated]
+webpack 5.106.2 compiled successfully in 3423 ms
+
+asset scratch-svg-renderer.js 1.61 MiB [emitted] [minimized] [big] (name: scratch-svg-renderer) 2 related assets
+orphan modules 12.4 KiB [orphan] 16 modules
+runtime modules 891 bytes 4 modules
+modules by path ../../node_modules/css-tree/ 438 KiB 123 modules
+modules by path ../../node_modules/tslog/cjs/ 68.8 KiB 13 modules
+modules by path ./src/ 67.7 KiB
+  ./src/index.js 756 bytes [built] [code generated]
+  + 11 modules
+modules by path ../../node_modules/scratch-render-fonts/src/ 1.31 MiB
+  modules by path ../../node_modules/scratch-render-fonts/src/*.ttf 1.02 MiB 6 modules
+  + 2 modules
+modules by path ../../node_modules/source-map-js/lib/*.js 41.1 KiB
+  ../../node_modules/source-map-js/lib/source-map-generator.js 14.6 KiB [built] [code generated]
+  + 5 modules
++ 7 modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  scratch-svg-renderer.js (1.61 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  scratch-svg-renderer (1.61 MiB)
+      scratch-svg-renderer.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.106.2 compiled with 3 warnings in 10544 ms
+
+asset scratch-svg-renderer.js 1.61 MiB [emitted] [minimized] [big] (name: scratch-svg-renderer) 2 related assets
+asset index.html 4.06 KiB [emitted] [from: src/playground/index.html] [copied]
+orphan modules 12.4 KiB [orphan] 16 modules
+runtime modules 891 bytes 4 modules
+modules by path ../../node_modules/css-tree/ 438 KiB 123 modules
+modules by path ../../node_modules/tslog/cjs/ 68.8 KiB 13 modules
+modules by path ./src/ 67.7 KiB
+  ./src/index.js 756 bytes [built] [code generated]
+  + 11 modules
+modules by path ../../node_modules/scratch-render-fonts/src/ 1.31 MiB
+  modules by path ../../node_modules/scratch-render-fonts/src/*.ttf 1.02 MiB 6 modules
+  + 2 modules
+modules by path ../../node_modules/source-map-js/lib/*.js 41.1 KiB
+  ../../node_modules/source-map-js/lib/source-map-generator.js 14.6 KiB [built] [code generated]
+  + 5 modules
++ 7 modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  scratch-svg-renderer.js (1.61 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  scratch-svg-renderer (1.61 MiB)
+      scratch-svg-renderer.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.106.2 compiled with 3 warnings in 10778 ms
+
+> @scratch/scratch-render@13.7.1 build
+> webpack --progress && npm run docs
+
+assets by status 3.61 MiB [big]
+  asset queryPlayground.js 1.81 MiB [compared for emit] [minimized] [big] (name: queryPlayground) 2 related assets
+  asset playground.js 1.81 MiB [compared for emit] [minimized] [big] (name: playground) 2 related assets
+assets by path *.html 4.35 KiB
+  asset queryPlayground.html 2.78 KiB [compared for emit] [from: src/playground/queryPlayground.html] [copied]
+  asset index.html 1.57 KiB [compared for emit] [from: src/playground/index.html] [copied]
+asset style.css 115 bytes [compared for emit] [from: src/playground/style.css] [copied]
+orphan modules 12.4 KiB [orphan] 16 modules
+runtime modules 1.79 KiB 8 modules
+modules by path ../../node_modules/ 2.38 MiB 172 modules
+modules by path ./src/ 256 KiB
+  modules by path ./src/*.js 217 KiB 12 modules
+  modules by path ./src/util/*.js 12.9 KiB 4 modules
+  modules by path ./src/playground/*.js 14.4 KiB 3 modules
+  modules by path ./src/shaders/ 11.6 KiB 2 modules
+modules by path ../scratch-svg-renderer/src/ 79.5 KiB
+  ../scratch-svg-renderer/src/index.js 740 bytes [built] [code generated]
+  ../scratch-svg-renderer/src/svg-renderer.js 7.56 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/load-svg-string.js 15 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/svg-element.js 3.54 KiB [built] [code generated]
+  + 8 modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  playground.js (1.81 MiB)
+  queryPlayground.js (1.81 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  playground (1.81 MiB)
+      playground.js
+  queryPlayground (1.81 MiB)
+      queryPlayground.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.106.2 compiled with 3 warnings in 36918 ms
+
+asset scratch-render.min.js 1.8 MiB [compared for emit] [minimized] [big] (name: scratch-render.min) 2 related assets
+asset scratch-render.js 1.8 MiB [compared for emit] [minimized] [big] (name: scratch-render) 2 related assets
+orphan modules 12.4 KiB [orphan] 16 modules
+runtime modules 1.79 KiB 8 modules
+modules by path ../../node_modules/ 2.38 MiB 172 modules
+modules by path ./src/ 241 KiB
+  modules by path ./src/*.js 217 KiB 13 modules
+  modules by path ./src/util/*.js 12.9 KiB 4 modules
+  modules by path ./src/shaders/ 11.6 KiB
+    ./node_modules/raw-loader/index.js!./src/shaders/sprite.vert 3.3 KiB [built] [code generated]
+    ./node_modules/raw-loader/index.js!./src/shaders/sprite.frag 8.27 KiB [built] [code generated]
+modules by path ../scratch-svg-renderer/src/ 79.5 KiB
+  ../scratch-svg-renderer/src/index.js 740 bytes [built] [code generated]
+  ../scratch-svg-renderer/src/svg-renderer.js 7.56 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/load-svg-string.js 15 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/svg-element.js 3.54 KiB [built] [code generated]
+  + 8 modules
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  scratch-render.js (1.8 MiB)
+  scratch-render.min.js (1.8 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  scratch-render (1.8 MiB)
+      scratch-render.js
+  scratch-render.min (1.8 MiB)
+      scratch-render.min.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.106.2 compiled with 3 warnings in 35432 ms
+
+asset scratch-render.js 5.92 MiB [compared for emit] [minimized] (name: scratch-render) 1 related asset
+1158 modules
+
+WARNING in ../../node_modules/isomorphic-dompurify/node_modules/jsdom/lib/jsdom/utils.js 102:2-36
+Module not found: Error: Can't resolve 'canvas' in '/usr/app/scratch-editor/node_modules/isomorphic-dompurify/node_modules/jsdom/lib/jsdom'
+ @ ../../node_modules/isomorphic-dompurify/node_modules/jsdom/lib/jsdom/browser/Window.js 7:26-45
+ @ ../../node_modules/isomorphic-dompurify/node_modules/jsdom/lib/api.js 15:25-61
+ @ ../../node_modules/isomorphic-dompurify/index.js 1:194-210
+ @ ../scratch-svg-renderer/src/sanitize-svg.js 12:16-47
+ @ ../scratch-svg-renderer/src/index.js 5:18-43
+ @ ./src/SVGSkin.js 25:15-55
+ @ ./src/RenderWebGL.js 34:14-34
+ @ ./src/index.js 1:18-42
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.106.2 compiled with 1 warning in 50423 ms
+
+> @scratch/scratch-render@13.7.1 docs
+> typedoc
+
+[96m[info][0m html generated at ./playground/docs
+
+> @scratch/scratch-vm@13.7.1 build
+> npm run docs && webpack --progress
+
+
+> @scratch/scratch-vm@13.7.1 docs
+> typedoc
+
+[96m[info][0m html generated at ./playground/docs
+assets by status 17.2 MiB [cached] 98 assets
+orphan modules 5.06 MiB [orphan] 465 modules
+runtime modules 3.18 KiB 18 modules
+javascript modules 12.2 MiB
+  modules by path ../ 9.03 MiB 319 modules
+  modules by path ./ 3.13 MiB
+    modules by path ./src/ 3.05 MiB 156 modules
+    modules by path ./node_modules/ 83.5 KiB 26 modules
+  + 4 modules
+json modules 236 KiB
+  modules by path ../ 171 KiB
+    modules by path ../../node_modules/scratch-parser/ 14.3 KiB 8 modules
+    + 3 modules
+  modules by path ./ 65.8 KiB 10 modules
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 1:18-63
+Module not found: Error: Can't resolve '../../extension-support/block-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+ @ ./src/index-exposed.js 1:33-56
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 2:21-69
+Module not found: Error: Can't resolve '../../extension-support/argument-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+ @ ./src/index-exposed.js 1:33-56
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 3:19-65
+Module not found: Error: Can't resolve '../../extension-support/target-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+ @ ./src/index-exposed.js 1:33-56
+
+3 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.106.2 compiled with 3 errors in 97981 ms
+
+assets by status 10.1 MiB [cached] 2 assets
+orphan modules 5.49 MiB [orphan] 477 modules
+runtime modules 1.16 KiB 7 modules
+modules by path ../../node_modules/ 16.8 MiB 1166 modules
+modules by path ./ 3.01 MiB 152 modules
+modules by path ../scratch-svg-renderer/src/ 67.7 KiB
+  ../scratch-svg-renderer/src/index.js 756 bytes [built] [code generated]
+  ../scratch-svg-renderer/src/svg-renderer.js 5.65 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/load-svg-string.js 12.4 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/svg-element.js 1.86 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/font-converter.js 1.35 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/sanitize-svg.js 6.57 KiB [built] [code generated]
+  ../scratch-svg-renderer/src/serialize-svg-to-string.js 612 bytes [built] [code generated]
+  ../scratch-svg-renderer/src/font-inliner.js 1.85 KiB [built] [code generated]
+  + 4 modules
++ 40 modules
+
+WARNING in ../../node_modules/isomorphic-dompurify/node_modules/jsdom/lib/jsdom/utils.js 102:2-36
+Module not found: Error: Can't resolve 'canvas' in '/usr/app/scratch-editor/node_modules/isomorphic-dompurify/node_modules/jsdom/lib/jsdom'
+ @ ../../node_modules/isomorphic-dompurify/node_modules/jsdom/lib/jsdom/browser/Window.js 7:26-45
+ @ ../../node_modules/isomorphic-dompurify/node_modules/jsdom/lib/api.js 15:25-61
+ @ ../../node_modules/isomorphic-dompurify/index.js 1:194-210
+ @ ../scratch-svg-renderer/src/sanitize-svg.js 14:18-49
+ @ ../scratch-svg-renderer/src/index.js 5:20-45
+ @ ./src/import/load-costume.js 6:4-44
+ @ ./src/virtual-machine.js 21:4-39
+ @ ./src/index.js 1:23-51
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 1:18-63
+Module not found: Error: Can't resolve '../../extension-support/block-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 2:21-69
+Module not found: Error: Can't resolve '../../extension-support/argument-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 3:19-65
+Module not found: Error: Can't resolve '../../extension-support/target-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+
+3 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.106.2 compiled with 3 errors and 1 warning in 94085 ms
+
+assets by status 5.62 MiB [cached] 2 assets
+orphan modules 5.06 MiB [orphan] 465 modules
+runtime modules 1.59 KiB 9 modules
+cacheable modules 11.5 MiB
+  modules by path ../ 8.39 MiB
+    modules by path ../../node_modules/ 8.32 MiB 253 modules
+    modules by path ../scratch-svg-renderer/src/ 67.7 KiB 12 modules
+    ../../../../../workspaces/scratch-extension-demos/your-scratch-exte...(truncated) 3.17 KiB [built] [code generated]
+  modules by path ./ 3.16 MiB
+    modules by path ./src/ 3.01 MiB 152 modules
+    modules by path ./node_modules/ 146 KiB 35 modules
+    ./package.json 2.9 KiB [built] [code generated]
+  readable-stream (ignored) 15 bytes [built] [code generated]
+  node-fetch (ignored) 15 bytes [built] [code generated]
+  util (ignored) 15 bytes [built] [code generated]
+  crypto (ignored) 15 bytes [optional] [built] [code generated]
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 1:18-63
+Module not found: Error: Can't resolve '../../extension-support/block-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+ @ ./src/index-exposed.js 1:33-56
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 2:21-69
+Module not found: Error: Can't resolve '../../extension-support/argument-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+ @ ./src/index-exposed.js 1:33-56
+
+ERROR in ../../../../../workspaces/scratch-extension-demos/your-scratch-extension/index.js 3:19-65
+Module not found: Error: Can't resolve '../../extension-support/target-type' in '/workspaces/scratch-extension-demos/your-scratch-extension'
+ @ ./src/extension-support/extension-manager.js 27:30-77
+ @ ./src/virtual-machine.js 11:25-73
+ @ ./src/index.js 1:23-51
+ @ ./src/index-exposed.js 1:33-56
+
+3 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.106.2 compiled with 3 errors in 61559 ms
+
+> @scratch/scratch-gui@13.7.1 build
+> npm run clean && npm run build:dev && npm run build:dist && npm run build:dist-standalone
+
+
+> @scratch/scratch-gui@13.7.1 clean
+> rimraf build dist
+
+
+> @scratch/scratch-gui@13.7.1 build:dev
+> BUILD_TYPE=dev webpack
+
+assets by path static/assets/*.png 44.2 MiB 1304 assets
+assets by path static/assets/*.gif 14.7 MiB 160 assets
+assets by path static/blocks-media/ 377 KiB 147 assets
+assets by path chunks/ 13.5 MiB 30 assets
+assets by path static/assets/*.jpg 3.15 MiB 24 assets
+assets by path ../dist/types/ 24.9 KiB 16 assets
+assets by path static/assets/*.svg 2.21 MiB 15 assets
+assets by path *.js 81.2 MiB
+  asset guistandalone.js 16.3 MiB [emitted] [minimized] [big] (name: guistandalone) 2 related assets
+  + 5 assets
+assets by path *.html 1.62 KiB
+  asset compatibility-testing.html 349 bytes [emitted]
+  + 4 assets
++ 5 assets
+orphan modules 11.3 MiB [orphan] 940 modules
+runtime modules 40.2 KiB 75 modules
+modules by path ./ 64.3 MiB (asset) 19.8 MiB (javascript) 2152 modules
+modules by path ../../node_modules/ 18.2 MiB
+  javascript modules 18 MiB 936 modules
+  json modules 236 KiB
+    modules by path ../../node_modules/@scratch/scratch-vm/ 65.8 KiB 10 modules
+    modules by path ../../node_modules/scratch-parser/ 14.3 KiB 8 modules
+    ../../node_modules/scratch-translate-extension-languages/languages.json 155 KiB [built] [code generated]
+    ../../node_modules/@mediapipe/face_detection/package.json 592 bytes [built] [code generated]
+    ../../node_modules/grapheme-breaker/src/classes.json 132 bytes [built] [code generated]
+readable-stream (ignored) 15 bytes [built] [code generated]
+node-fetch (ignored) 15 bytes [built] [code generated]
+util (ignored) 15 bytes [built] [code generated]
+crypto (ignored) 15 bytes [optional] [built] [code generated]
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  30d09ba32a17082ef820b57d52d60b7b.hex (1.1 MiB)
+  gui.js (16.2 MiB)
+  static/assets/nineties_logo.945297ca77c041c98377.svg (1.96 MiB)
+  static/assets/face-adjust-size.en.08e098ad5c971c5c31b9.gif (1.23 MiB)
+  static/assets/face-go-to-top-head.en.33c1341e64391ec6ed77.gif (386 KiB)
+  static/assets/cartoon-network.963ae0ec26486c12da2f.jpg (269 KiB)
+  static/assets/text-to-speech.6c1e56fd6b1c5ba7fb7d.jpg (271 KiB)
+  guistandalone.js (16.3 MiB)
+  blocksonly.js (16.2 MiB)
+  compatibilitytesting.js (16.2 MiB)
+  player.js (16.2 MiB)
+  chunks/mediapipe/face_detection/face_detection_full_range.tflite (1.03 MiB)
+  chunks/mediapipe/face_detection/face_detection_full_range_sparse.tflite (665 KiB)
+  chunks/mediapipe/face_detection/face_detection_solution_simd_wasm_bin.wasm (5.54 MiB)
+  chunks/mediapipe/face_detection/face_detection_solution_wasm_bin.wasm (5.43 MiB)
+  static/microbit/scratch-microbit-1.2.0.hex (1.1 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  gui (16.2 MiB)
+      gui.js
+  guistandalone (16.3 MiB)
+      guistandalone.js
+  blocksonly (16.2 MiB)
+      blocksonly.js
+  compatibilitytesting (16.2 MiB)
+      compatibilitytesting.js
+  player (16.2 MiB)
+      player.js
+
+webpack 5.106.2 compiled with 2 warnings in 227372 ms
+
+> @scratch/scratch-gui@13.7.1 build:dist
+> cross-env NODE_ENV=production BUILD_TYPE=dist webpack
+
+assets by path static/assets/*.png 44.2 MiB 1304 assets
+assets by path static/assets/*.gif 14.7 MiB 160 assets
+assets by path static/blocks-media/ 377 KiB 147 assets
+assets by path chunks/ 13.5 MiB 30 assets
+assets by path static/assets/*.jpg 3.15 MiB 24 assets
+assets by status 24.9 KiB [compared for emit] 16 assets
+assets by path static/assets/*.svg 2.21 MiB 15 assets
+assets by path libraries/*.json 1.14 MiB
+  assets by status 1 MiB [big] 2 assets
+  + 2 assets
+assets by path *.js 16.1 MiB
+  asset scratch-gui.js 16.1 MiB [emitted] [minimized] [big] (name: scratch-gui) 2 related assets
+  asset extension-worker.js 61 KiB [emitted] [from: ../../node_modules/@scratch/scratch-vm/dist/web/extension-worker.js] [copied] [minimized] 1 related asset
+asset 30d09ba32a17082ef820b57d52d60b7b.hex 1.1 MiB [emitted] [immutable] [from: static/microbit/scratch-microbit-1.2.0.hex] [big] (auxiliary name: scratch-gui)
+asset extension-worker.js.map 585 bytes [emitted] [from: ../../node_modules/@scratch/scratch-vm/dist/web/extension-worker.js.map] [copied]
+orphan modules 14 MiB [orphan] 1525 modules
+runtime modules 9.04 KiB 15 modules
+cacheable modules 64.3 MiB (asset) 26.2 MiB (javascript)
+  modules by path ./ 64.3 MiB (asset) 9.09 MiB (javascript) 1679 modules
+  modules by path ../../node_modules/ 17.1 MiB
+    javascript modules 16.8 MiB 707 modules
+    json modules 236 KiB 21 modules
+  readable-stream (ignored) 15 bytes [built] [code generated]
+  node-fetch (ignored) 15 bytes [built] [code generated]
+  util (ignored) 15 bytes [built] [code generated]
+  crypto (ignored) 15 bytes [optional] [built] [code generated]
+external "redux" 42 bytes [built] [code generated]
+external "react" 42 bytes [built] [code generated]
+external "react-redux" 42 bytes [built] [code generated]
+external "react-dom" 42 bytes [built] [code generated]
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  30d09ba32a17082ef820b57d52d60b7b.hex (1.1 MiB)
+  scratch-gui.js (16.1 MiB)
+  static/assets/nineties_logo.945297ca77c041c98377.svg (1.96 MiB)
+  static/assets/face-adjust-size.en.08e098ad5c971c5c31b9.gif (1.23 MiB)
+  static/assets/face-go-to-top-head.en.33c1341e64391ec6ed77.gif (386 KiB)
+  static/assets/cartoon-network.963ae0ec26486c12da2f.jpg (269 KiB)
+  static/assets/text-to-speech.6c1e56fd6b1c5ba7fb7d.jpg (271 KiB)
+  chunks/mediapipe/face_detection/face_detection_full_range.tflite (1.03 MiB)
+  chunks/mediapipe/face_detection/face_detection_full_range_sparse.tflite (665 KiB)
+  chunks/mediapipe/face_detection/face_detection_solution_simd_wasm_bin.wasm (5.54 MiB)
+  chunks/mediapipe/face_detection/face_detection_solution_wasm_bin.wasm (5.43 MiB)
+  libraries/costumes.json (337 KiB)
+  libraries/sprites.json (690 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  scratch-gui (16.1 MiB)
+      scratch-gui.js
+
+webpack 5.106.2 compiled with 2 warnings in 65518 ms
+
+> @scratch/scratch-gui@13.7.1 build:dist-standalone
+> cross-env NODE_ENV=production BUILD_TYPE=dist-standalone webpack
+
+assets by status 65.6 MiB [cached] 1516 assets
+assets by path . 29.9 MiB
+  assets by path static/ 377 KiB
+    assets by path static/blocks-media/high-contrast/ 189 KiB 74 assets
+    assets by path static/blocks-media/default/ 188 KiB 73 assets
+  assets by path chunks/ 13.3 MiB 18 assets
+  assets by path types/ 24.9 KiB
+    assets by path types/lib/ 11.4 KiB 9 assets
+    assets by path types/*.ts 11.3 KiB 5 assets
+    assets by path types/reducers/*.ts 2.31 KiB 2 assets
+  assets by path *.js 16.3 MiB
+    asset scratch-gui-standalone.js 16.2 MiB [emitted] [minimized] [big] (name: scratch-gui-standalone) 2 related assets
+    asset extension-worker.js 61 KiB [compared for emit] [from: ../../node_modules/@scratch/scratch-vm/dist/web/extension-worker.js] [copied] [minimized] 1 related asset
+  asset extension-worker.js.map 585 bytes [compared for emit] [from: ../../node_modules/@scratch/scratch-vm/dist/web/extension-worker.js.map] [copied]
+orphan modules 14.1 MiB [orphan] 1554 modules
+runtime modules 8.05 KiB 15 modules
+cacheable modules 64.3 MiB (asset) 26.4 MiB (javascript)
+  modules by path ./ 64.3 MiB (asset) 9.09 MiB (javascript) 1671 modules
+  modules by path ../../node_modules/ 17.3 MiB
+    javascript modules 17.1 MiB 726 modules
+    json modules 236 KiB
+      modules by path ../../node_modules/@scratch/scratch-vm/ 65.8 KiB 10 modules
+      modules by path ../../node_modules/scratch-parser/ 14.3 KiB 8 modules
+      + 3 modules
+  readable-stream (ignored) 15 bytes [built] [code generated]
+  node-fetch (ignored) 15 bytes [built] [code generated]
+  util (ignored) 15 bytes [built] [code generated]
+  crypto (ignored) 15 bytes [optional] [built] [code generated]
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  30d09ba32a17082ef820b57d52d60b7b.hex (1.1 MiB)
+  scratch-gui-standalone.js (16.2 MiB)
+  static/assets/nineties_logo.945297ca77c041c98377.svg (1.96 MiB)
+  static/assets/face-adjust-size.en.08e098ad5c971c5c31b9.gif (1.23 MiB)
+  static/assets/face-go-to-top-head.en.33c1341e64391ec6ed77.gif (386 KiB)
+  static/assets/cartoon-network.963ae0ec26486c12da2f.jpg (269 KiB)
+  static/assets/text-to-speech.6c1e56fd6b1c5ba7fb7d.jpg (271 KiB)
+  chunks/mediapipe/face_detection/face_detection_full_range.tflite (1.03 MiB)
+  chunks/mediapipe/face_detection/face_detection_full_range_sparse.tflite (665 KiB)
+  chunks/mediapipe/face_detection/face_detection_solution_simd_wasm_bin.wasm (5.54 MiB)
+  chunks/mediapipe/face_detection/face_detection_solution_wasm_bin.wasm (5.43 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  scratch-gui-standalone (16.2 MiB)
+      scratch-gui-standalone.js
+
+webpack 5.106.2 compiled with 2 warnings in 63492 ms
+
+> @scratch/scratch-media-lib-scripts@13.7.1 build
+> node scripts/build_media_libraries.js media/editor
+

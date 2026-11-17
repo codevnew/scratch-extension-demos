@@ -13,19 +13,11 @@ if [ "$filepath1" != $filepath2 ]; then
 fi
 
 git fetch
-echo
-git merge origin/master -m "sync upstream"
-echo
 git push
-echo
 git add /workspaces/$username/.
-echo
 git commit -m "commit"
-echo
 git pull
-echo
 git push
-echo
 git merge -m "merge"
 
 if [ "$change" -eq 1 ]; then
