@@ -13,12 +13,11 @@ if [ "$filepath1" != $filepath2 ]; then
 fi
 
 git fetch
-git push
-git add /workspaces/$username/.
-git commit -m "commit"
 git pull
-git push
+git add /workspaces/$username/.
 git merge -m "merge"
+git commit -m "commit"
+git push
 
 if [ "$change" -eq 1 ]; then
 	cd $filepath1
